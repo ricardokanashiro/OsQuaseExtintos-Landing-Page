@@ -1,0 +1,23 @@
+@mixin flexST($justifyValue, $alignValue) {
+    display: flex;
+    justify-content: $justifyValue;
+    align-items: $alignValue;
+}
+
+@mixin tablet-up {
+    @media(max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin desktop-up {
+    @media(max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin phone-down {
+    @media(max-width: 550px) {
+        @content;
+    }
+}
