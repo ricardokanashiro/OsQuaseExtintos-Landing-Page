@@ -22,9 +22,9 @@ ul {
 
 header {
   width: 100%;
-  height: 25rem;
+  height: 18rem;
   padding: 1rem 4rem;
-  background-image: url("../assets/banner.jpg");
+  background-image: url("../assets/banner 6.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -46,14 +46,14 @@ header .header__logo-btn h1 {
   }
 }
 header .header__logo-btn button {
-  background-color: green;
+  background: #2EB62C;
   color: white;
   padding: 1rem 2rem;
   border-radius: 0.6rem;
   font-weight: bold;
-  border: 3px solid green;
+  border: 3.5px solid #2EB62C;
   transition-duration: 200ms;
-  transition-property: background-color;
+  transition-property: background;
 }
 @media (max-width: 550px) {
   header .header__logo-btn button {
@@ -63,8 +63,12 @@ header .header__logo-btn button {
     font-family: "Poppins", sans-serif;
   }
 }
+header .header__logo-btn .header__btn-wrapper {
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
 header .header__logo-btn button:hover {
-  background-color: transparent;
+  background: transparent;
 }
 header .header__project-info {
   margin-top: 3rem;
@@ -73,11 +77,7 @@ header .header__project-info h2 {
   color: white;
   font-size: 3rem;
   margin-bottom: 1.5rem;
-}
-header .header__project-info p {
-  color: white;
-  font-size: 1rem;
-  width: min(40rem, 100%);
+  text-align: center;
 }
 @media (max-width: 800px) {
   header .header__project-info h2 {
@@ -138,15 +138,41 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 4rem;
+}
+
+.main__sobre {
+  width: 70%;
+  margin: 2rem auto 5rem auto;
+}
+.main__sobre h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.main__sobre p {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+@media (max-width: 800px) {
+  .main__sobre {
+    margin: 2rem auto;
+    width: 80%;
+  }
+  .main__sobre h3 {
+    font-size: 1.7rem;
+  }
+  .main__sobre p {
+    font-size: 0.6rem;
+  }
 }
 
 .animals-list__animal-card {
   width: max(70%, 30rem);
   height: auto;
-  background-color: green;
+  background: linear-gradient(45deg, #2EB62C, #6bd362);
   display: flex;
-  gap: 1rem;
   overflow: hidden;
   border-radius: 0.7rem;
   transition-duration: 200ms;
@@ -163,24 +189,47 @@ main {
 .animals-list__animal-card .animal-card__animal-description {
   height: 100%;
   flex: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 0;
   position: relative;
   overflow: hidden;
   cursor: pointer;
 }
+.animals-list__animal-card .animal-card__animal-description h3 {
+  padding: 0 2rem;
+}
+@media (max-width: 800px) {
+  .animals-list__animal-card .animal-card__animal-description h3 {
+    padding: 1rem 0.7rem 0 0.7rem;
+  }
+}
 .animals-list__animal-card .animal-card__animal-description p {
-  padding: 0.5rem 0;
+  padding: 0.5rem 2rem;
+}
+@media (max-width: 800px) {
+  .animals-list__animal-card .animal-card__animal-description p {
+    padding: 0.5rem 0.7rem;
+  }
+}
+.animals-list__animal-card .animal-card__animal-description .animal-description__charac-list {
+  padding: 0 2rem;
+}
+@media (max-width: 800px) {
+  .animals-list__animal-card .animal-card__animal-description .animal-description__charac-list {
+    padding: 0 0.7rem;
+  }
 }
 .animals-list__animal-card .animal-card__animal-description .animal-description__expand-info {
-  margin: 0.5rem 0;
+  padding: 0 2rem;
   max-height: 0;
   overflow: hidden;
   transition-duration: 1200ms;
   transition-property: max-height;
+  margin: 1rem 0;
 }
 @media (max-width: 800px) {
   .animals-list__animal-card .animal-card__animal-description .animal-description__expand-info {
     font-size: 0.75rem;
+    padding: 0 0.7rem;
   }
 }
 .animals-list__animal-card .animal-card__animal-description .animal-description__expand-info-active {
@@ -197,7 +246,7 @@ main {
   transition-property: position, bottom;
   position: absolute;
   bottom: -2rem;
-  right: 2rem;
+  right: 0;
 }
 .animals-list__animal-card .animal-card__animal-description .animal-description__expand-info-btn .expand-info-btn__img {
   min-width: 1rem;

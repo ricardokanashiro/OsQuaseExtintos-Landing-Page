@@ -11,9 +11,9 @@
 header {
 
     width: 100%;
-    height: 25rem;
+    height: 18rem;
     padding: 1rem 4rem;
-    background-image: url('../assets/banner.jpg');
+    background-image: url('../assets/banner 6.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -35,14 +35,14 @@ header {
         }
 
         button {
-            background-color: green;
+            background: #2EB62C;
             color: white;
             padding: 1rem 2rem;
             border-radius: .6rem;
             font-weight: bold;
-            border: 3px solid green;
+            border: 3.5px solid #2EB62C;
             transition-duration: 200ms;
-            transition-property: background-color;
+            transition-property: background;
 
             @include phone-down {
                 font-size: .6rem;
@@ -51,9 +51,14 @@ header {
                 font-family: $mainFont;
             }
         }
+
+        .header__btn-wrapper {
+            border-radius: .6rem;
+            overflow: hidden;
+        }
     
         button:hover {
-            background-color: transparent;
+            background: transparent;
         }
     }
 
@@ -65,12 +70,7 @@ header {
             color: white;
             font-size: 3rem;
             margin-bottom: 1.5rem;
-        }
-    
-        p {
-            color: white;
-            font-size: 1rem;
-            width: min(40rem, 100%);
+            text-align: center;
         }
 
         @include tablet-up {
@@ -134,20 +134,48 @@ main {
 
 .main__animals-list {
     width: 100%;
-    // padding: 0 4rem;
     margin-top: 4rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 4rem;
+}
+
+.main__sobre {
+    width: 70%;
+    margin: 2rem auto 5rem auto;
+
+    h3 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+
+    @include tablet-up {
+        margin: 2rem auto;
+        width: 80%;
+
+        h3 {
+            font-size: 1.7rem;
+        }
+
+        p {
+            font-size: .6rem;
+        }
+    }
 }
 
 .animals-list__animal-card {
     width: max(70%, 30rem);
     height: auto;
-    background-color: green;
+    background: linear-gradient(45deg, #2EB62C, #6bd362);
     display: flex;
-    gap: 1rem;
     overflow: hidden;
     border-radius: .7rem;
     
@@ -165,24 +193,46 @@ main {
     .animal-card__animal-description {
         height: 100%;
         flex: 1;
-        padding: 1.5rem 1rem;
+        padding: 1.5rem 0;
         position: relative;
         overflow: hidden;
         cursor: pointer;
 
+        h3 {
+            padding: 0 2rem;
+
+            @include tablet-up {
+                padding: 1rem .7rem 0 .7rem;
+            }
+        }
+
         p {
-            padding: .5rem 0;
+            padding: .5rem 2rem;
+
+            @include tablet-up {
+                padding: .5rem .7rem;
+            }
+        }
+
+        .animal-description__charac-list {
+            padding: 0 2rem;
+
+            @include tablet-up {
+                padding: 0 .7rem;
+            }
         }
 
         .animal-description__expand-info {
-            margin: .5rem 0;
+            padding: 0 2rem;
             max-height: 0;
             overflow: hidden;
             transition-duration: 1200ms;
             transition-property: max-height;
+            margin: 1rem 0;
 
             @include tablet-up {
                 font-size: .75rem;
+                padding: 0 .7rem;
             }
         }
 
@@ -203,7 +253,7 @@ main {
 
             position: absolute;
             bottom: -2rem;
-            right: 2rem;
+            right: 0;
 
             .expand-info-btn__img {
                 min-width: 1rem;
