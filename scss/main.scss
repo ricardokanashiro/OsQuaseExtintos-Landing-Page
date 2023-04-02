@@ -306,3 +306,54 @@ footer {
         font-size: .8rem;
     }
 }
+
+.modal-blur {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100vh;
+    display: none;
+
+    position: absolute;
+}
+
+.modal-contribuir {
+    width: min(30rem, 80%);
+    background-color: white;
+
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+
+    position: absolute;
+    right: calc(50% - 15rem);
+    top: 30%;
+
+    ul {
+        list-style: circle;
+
+        li {
+            margin-top: 1rem;
+        }
+    }
+
+    @include tablet-up {
+        right: calc(50% - 8rem);
+        top: 10%;
+
+        li {
+            font-size: .7rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+    }
+}
+
+.modal-active {
+    display: flex;
+}

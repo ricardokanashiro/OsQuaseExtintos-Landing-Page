@@ -1,5 +1,8 @@
 const animal_cards = document.querySelectorAll('.animals-list__animal-card');
 const container = document.getElementById('main-container');
+const contribuir_btn = document.querySelector('.header__btn-wrapper button');
+const modal = document.querySelector('.modal-contribuir');
+const modal_blur = document.querySelector('.modal-blur');
 
 function toggleExpandInfo(event) {
 
@@ -26,6 +29,23 @@ function toggleExpandInfo(event) {
     }
 }
 
+function addModal() {
+    modal.classList.add('modal-active');
+    modal_blur.classList.add('modal-active');
+    document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.height = '100vh';
+}
+
+function removeModal() {
+    modal.classList.remove('modal-active');
+    modal_blur.classList.remove('modal-active');
+    document.documentElement.style.overflow = 'visible';
+    document.documentElement.style.height = 'auto';
+}
+
 animal_cards.forEach(card => card.addEventListener(
     'click', (event) => toggleExpandInfo(event)
 ));
+
+contribuir_btn.addEventListener('click', (event) => addModal(event));
+modal_blur.addEventListener('click', (event) => removeModal(event));
