@@ -33,7 +33,7 @@ function addModal() {
     modal_blur.classList.add('modal-active');
     document.documentElement.style.overflow = 'hidden';
     document.documentElement.style.height = '100vh';
-    modal.style.right = `${50% - (modal.clientWidth / 2)}`;
+    modal.style.right = `calc(50% - ${(modal.clientWidth / 2)})`;
 }
 
 function removeModal() {
