@@ -323,6 +323,7 @@ footer {
 }
 @media (max-width: 800px) {
   .modal-contribuir {
+    width: 16rem;
     right: calc(50% - 8rem);
     top: 10%;
   }
