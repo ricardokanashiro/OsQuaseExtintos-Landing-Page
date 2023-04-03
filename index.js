@@ -18,7 +18,6 @@ function toggleExpandInfo(event) {
     let expandBtn = target.querySelector('.animal-description__expand-info-btn');
 
     if(container.offsetWidth <= 800) {
-        console.log('entrou');
         if(expandBtn.style.bottom = '0rem') {
             setTimeout(() => {
                 expandBtn.style.bottom = '-2rem';
@@ -34,6 +33,7 @@ function addModal() {
     modal_blur.classList.add('modal-active');
     document.documentElement.style.overflow = 'hidden';
     document.documentElement.style.height = '100vh';
+    modal.style.right = `${50% - (modal.clientWidth / 2)}`;
 }
 
 function removeModal() {
